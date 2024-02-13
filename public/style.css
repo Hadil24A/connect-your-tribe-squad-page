@@ -6,48 +6,187 @@
   padding: 0;
 }
 
+:root {
+  --clr-primary-1: #FCEEC9;
+  --clr-primary-2: #F8C353;
+  --clr-primary-3: #F57C67;
+  --clr-primary-4: #B7515C;
+  --clr-primary-5: #64B8A5;
+  --clr-primary-6: #3B665D;
+  
+  --clr-light-1: #FFF2DC;
+  --clr-light-2: #FDD683;
+  --clr-light-3: #FF9F8E;
+  --clr-light-4: #F47785;
+  --clr-light-5: #7EE1CA;
+  --clr-light-6: #679287;
+  
+  --clr-dark-1: #FFDDA3;
+  --clr-dark-2: #EDB541;
+  --clr-dark-3: #D36D5C;
+  --clr-dark-4: #933B45;
+  --clr-dark-5: #458878;
+  --clr-dark-6: #2A453F;
+  
+  --clr-contrast-100: #333;
+  --clr-contrast-0: #FFF;
+
+  --heading-size: 1.7em;
+}
+
+@font-face {
+  font-family: "Abel";
+  src: url(/Abel-Regular.ttf);
+}
+
 body {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  font-family: Helvetica, Arial, sans-serif;
-  background: silver;
+  background: var(--clr-primary-1);
+  font-family: "Abel";
+  overflow-y: hidden;
+}
 
-  & article.person {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    width: 12rem;
-    aspect-ratio: 1/1;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    background: white;
-    text-align: center;
-    transform-origin: center;
-    transform: rotate(2deg);
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
-    & header {
-      padding: 0.5rem;
-      background: red;
-      color: white;
+img {
+  height: 25px;
+  padding: 2px;
+}
 
-      & h1 {
-        text-transform: uppercase;
-      }
-    }
+button {
+  border: none;
+  border-radius: 49%;
+  margin: 1em;
+  padding: 0.7em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  font-family: "Abel";
+}
 
-    & > p {
-      font-size: 2rem;
-      font-family: 'Permanent Marker', cursive;
-      transform-origin: center;
-      transform: rotate(-6deg);
-      word-break: break-all;
-    }
+button:hover {
+  border: none;
+  border-radius: 16px;
+  width: max-content;
+  scale: 1.1;
+ }
 
-    & footer {
-      height: 1rem;
-      background: red;
-    }
-  }
+button:nth-of-type(1) {
+  background: var(--clr-dark-1);
+}
+
+button:nth-of-type(2) {
+  background: var(--clr-primary-2);  
+}
+
+button:nth-of-type(3) {
+  background: var(--clr-primary-3);
+}
+
+button:nth-of-type(4) {
+  background: var(--clr-light-4);
+}
+
+button:nth-of-type(5) {
+  background: var(--clr-primary-5);
+}
+
+button:nth-of-type(6) {
+  background: var(--clr-light-6);
+}
+
+.files {
+  position: relative;
+  height: 5em;
+}
+
+h2, h3, h4, h5 {
+  border-radius: 8px;
+  font-size: var(--heading-size);
+  padding: 0em 0.5em 0em 0.5em;
+  border: var(--clr-contrast-100) solid 2px;
+  border-bottom: none;
+}
+
+h2 {
+  background: var(--clr-primary-4);
+  margin-left: 1em;
+  position: fixed; bottom: 11.55em;
+  z-index: 1;
+}
+
+.d-file {
+  background: var(--clr-primary-4);
+  width: 100vw;
+  height: 20em;
+  position: fixed; bottom: 0em;
+  border-top: var(--clr-contrast-100) solid 2px;
+}
+
+h3 {
+  background: var(--clr-primary-5);
+  margin-left: 2em;
+  position: fixed; bottom: 8.55em;
+  z-index: 1;
+}
+
+.e-file {
+  background: var(--clr-primary-5);
+  width: 100vw;
+  height: 15em;
+  position: fixed; bottom: 0em;
+  border-top: var(--clr-contrast-100) solid 2px;
+}
+
+h4 {
+  background: var(--clr-primary-6);
+  margin-left: 4em;
+  position: fixed; bottom: 5.65em;
+  z-index: 1;
+}
+
+.f-file {
+  background: var(--clr-primary-6);
+  width: 100vw;
+  height: 10em;
+  position: fixed; bottom: 0em;
+  border-top: var(--clr-contrast-100) solid 2px;
+}
+
+h5 {
+  background: var(--clr-primary-3);
+  margin-left: 6em;
+  position: fixed; bottom: 2.7em;
+  z-index: 1;
+}
+
+.all-squads-files {
+  background: var(--clr-primary-3);
+  width: 100vw;
+  height: 5em;
+  position: fixed; bottom: 0em;
+  border-top: var(--clr-contrast-100) solid 2px;
+}
+
+.d-file:hover, h2:hover{
+  margin-bottom: 2em;
+}
+
+.e-file:hover {
+ 
+}
+
+
+.f-file:hover {
+ 
+}
+
+.all-squads-files:hover {
+  
 }
