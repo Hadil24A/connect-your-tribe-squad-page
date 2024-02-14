@@ -1,0 +1,35 @@
+<%- include('./partials/head') %>
+
+<main>
+  <a href="index">
+    <svg class="back-icon" version="1.0" xmlns="http://www.w3.org/2000/svg"
+        width="36" height="30" viewBox="0 0 512.000000 512.000000"
+        preserveAspectRatio="xMidYMid meet">
+        <metadata> Created by potrace 1.16, written by Peter Selinger 2001-2019 </metadata>
+        <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="var(--clr-primair-50)" stroke="none">
+            <path d="M2391 3364 c-435 -438 -791 -800 -791 -804 0 -12 1581 -1600 1594 -1600 14 0 326 311 326 325 0 6 -285 295 -632 642 l-633 633 633 633 c347 347 632 637 632 642 0 14 -313 325 -327 325 -6 0 -367 -358 -802 -796z"/>
+        </g>
+    </svg>
+</a>
+
+    <div class="menu">
+        <button> <img src="/images/buttons/loupe.png" alt="search">Zoek</button>
+        <button> <img src="/images/buttons/address.png" alt="adres"><a href="https://fdnd.directus.app/items/person/?filter={%22bio%22:{%22_icontains%22:%22woon%22}}"></a>Adres</button>
+        <button> <img src="/images/buttons/cake.png" alt="leeftijd">Leeftijd</button>
+        <button> <img src="/images/buttons/user.png" alt="naam">Naam</button>
+        <button> <img src="/images/buttons/hobbies.png" alt="hobbies">Hobbies</button>
+        <button> <img src="/images/buttons/team.png" alt="squad">Squad</button>
+      </div>
+
+      <ul class="personen">
+        <% persons.forEach(person => { %>
+          <li><p><%= person.name %> <%= person.surname%></p> <p><%= person.bio%></p></li>
+          <% }) %>
+      </ul>
+
+    </main>
+
+<%- include('./partials/foot') %>
+
+
+<!-- {"bio":{"_icontains":"woon"}}

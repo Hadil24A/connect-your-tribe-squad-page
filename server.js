@@ -6,6 +6,10 @@ import fetchJson from './helpers/fetch-json.js'
 // Stel het basis endpoint in
 const apiUrl = 'https://fdnd.directus.app/items'
 
+
+// Haal alle squads uit de WHOIS API op
+const squadData = await fetchJson(apiUrl + '/squad')
+
 // Maak een nieuwe express app aan
 const app = express()
 
@@ -25,6 +29,22 @@ app.get('/', function (request, response) {
     response.render('index', data)
   })
 })
+
+// Maak een GET route voor de index
+app.get('/squad', function (request, response) {
+  // Haal alle personen uit de WHOIS API op
+  fetchJson(apiUrl + '/person/?filter={"squad_id":4}').then((apiData) => {
+    // apiData bevat gegevens van alle personen uit alle squads
+    // Je zou dat hier kunnen filteren, sorteren, of zelfs aanpassen, voordat je het doorgeeft aan de view
+
+    // Render index.ejs uit de views map en geef de opgehaalde data mee als variabele, genaamd persons
+    response.render('squad', {persons: apiData.data, squads: squadData.data})
+  })
+})
+app.get('/index', function (request, response) {
+  response.render('index', {persons: apiData.data, squads: squadData.data})
+  })
+
 
 // Maak een POST route voor de index
 app.post('/', function (request, response) {
@@ -49,3 +69,5 @@ app.listen(app.get('port'), function () {
   // Toon een bericht in de console en geef het poortnummer door
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
+
+

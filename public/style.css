@@ -42,7 +42,14 @@
 body {
   background: var(--clr-primary-1);
   font-family: "Abel";
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
+}
+
+.back-icon {
+  left: 0.5em;
+  position: absolute;
+  top: 5em;
+  cursor: pointer;
 }
 
 .menu {
@@ -106,6 +113,10 @@ button:nth-of-type(6) {
 .files {
   position: relative;
   height: 5em;
+}
+
+a {
+  color: var(--clr-contrast-100);
 }
 
 h2, h3, h4, h5 {
@@ -177,20 +188,20 @@ h5 {
 }
 
 .d-file:hover, h2:hover{
-  margin-bottom: 2em;
+  scale: 1.1;
 }
 
-.e-file:hover {
- 
+.e-file:hover, h3:hover{
+  scale: 1.1;
 }
 
 
-.f-file:hover {
- 
+.f-file:hover, h4:hover{
+  scale: 1.1;
 }
 
-.all-squads-files:hover {
-  
+.all-squads-files:hover, h5:hover{
+  scale: 1.1;
 }
 
 @media(min-width:700px) {
@@ -209,4 +220,14 @@ h5 {
   h5 {
     margin-left: 10em;
   }
+}
+
+ul {
+  margin: 2em;
+  list-style: none;  
+  line-height: 2em;
+}
+
+li p:nth-of-type(1) {
+  font-weight: bold;
 }
