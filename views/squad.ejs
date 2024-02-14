@@ -14,13 +14,22 @@
 
     <div class="menu">
         <button> <img src="/images/buttons/loupe.png" alt="search">Zoek</button>
-        <button> <img src="/images/buttons/address.png" alt="adres"><a href="https://fdnd.directus.app/items/person/?filter={%22bio%22:{%22_icontains%22:%22woon%22}}"></a>Adres</button>
+        <button id="fetchAdressButton"> <img src="/images/buttons/address.png" alt="adres"><a href="https://fdnd.directus.app/items/person/?filter={%22bio%22:{%22_icontains%22:%22woon%22}}"></a>Adres</button>
         <button> <img src="/images/buttons/cake.png" alt="leeftijd">Leeftijd</button>
         <button> <img src="/images/buttons/user.png" alt="naam">Naam</button>
         <button> <img src="/images/buttons/hobbies.png" alt="hobbies">Hobbies</button>
         <button> <img src="/images/buttons/team.png" alt="squad">Squad</button>
       </div>
 
+      <label>
+        <form>
+          <select>
+            <option value="" disabled selected hidden>Sorteer</option>
+            <option value="alfabetisch">Alfabetisch</option>
+            <option value="id">ID</option>
+          </select>
+        </form>
+      </label>
       <ul class="personen">
         <% persons.forEach(person => { %>
           <li><p><%= person.name %> <%= person.surname%></p> <p><%= person.bio%></p></li>

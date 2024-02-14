@@ -60,6 +60,15 @@ body {
   margin: 2em;
 }
 
+select {
+  position: absolute; top: 8em; right: 3em;
+  color: var(--clr-contrast-100);
+  border: var(--clr-contrast-100) 1px solid;
+  border-radius: 8px;
+  background-color: var(--clr-dark-1);
+  font-family: "Abel";
+}
+
 img {
   height: 25px;
   padding: 2px;
@@ -226,8 +235,17 @@ ul {
   margin: 2em;
   list-style: none;  
   line-height: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
+li {
+  border: 1px solid var(--clr-light-3);
+  padding: 1em;
+  margin: 0.5em;
+}
 li p:nth-of-type(1) {
   font-weight: bold;
 }

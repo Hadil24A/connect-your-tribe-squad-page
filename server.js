@@ -41,10 +41,12 @@ app.get('/squad', function (request, response) {
     response.render('squad', {persons: apiData.data, squads: squadData.data})
   })
 })
-app.get('/index', function (request, response) {
-  response.render('index', {persons: apiData.data, squads: squadData.data})
-  })
 
+// Maak een GET route voor de index
+app.get('/index', function (request, response) {
+
+    response.render('index')
+  })
 
 // Maak een POST route voor de index
 app.post('/', function (request, response) {
@@ -71,3 +73,8 @@ app.listen(app.get('port'), function () {
 })
 
 
+document.getElementById('fetchAdressButton')
+addEventListener.('click', fetchData);
+function fetchData() {
+  fetch('https://fdnd.directus.app/items/person/?filter={%22bio%22:{%22_icontains%22:%22woon%22}}')
+}
