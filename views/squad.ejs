@@ -30,9 +30,10 @@
           </select>
         </form>
       </label>
+    
       <ul class="personen">
         <% persons.forEach(person => { %>
-          <li><p><%= person.name %> <%= person.surname%></p> <p><%= person.bio%></p></li>
+          <li> <img src="/images/<%= person.id%>.<%= person.name%>.png"> <p><%= person.id%></p> <p><%= person.name %> <%= person.surname%></p> <p><%= person.bio%></p> </li>
           <% }) %>
       </ul>
 

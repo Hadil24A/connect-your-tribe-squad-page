@@ -73,8 +73,8 @@ app.listen(app.get('port'), function () {
 })
 
 
-document.getElementById('fetchAdressButton')
-addEventListener.('click', fetchData);
-function fetchData() {
-  fetch('https://fdnd.directus.app/items/person/?filter={%22bio%22:{%22_icontains%22:%22woon%22}}')
-}
+// document.getElementById('fetchAdressButton')
+// addEventListener.('click', fetchData);
+// function fetchData() {
+//   fetch('https://fdnd.directus.app/items/person/?filter={%22bio%22:{%22_icontains%22:%22woon%22}}')
+// }
