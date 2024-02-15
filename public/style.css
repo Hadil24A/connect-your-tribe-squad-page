@@ -45,6 +45,11 @@ body {
   color: var(--clr-contrast-100);
 }
 
+h1 {
+  margin: 2em 0 0 0 ;
+  text-align: center;
+}
+
 .back-icon {
   left: 0.5em;
   position: absolute;
@@ -61,7 +66,7 @@ body {
 }
 
 select {
-  position: absolute; top: 8em; right: 3em;
+  position: absolute; top: 12em; right: 3em;
   color: var(--clr-contrast-100);
   border: var(--clr-contrast-100) 1px solid;
   border-radius: 8px;
@@ -71,8 +76,16 @@ select {
 }
 
 .menu img {
-  height: 25px;
-  padding: 2px;
+  height: 35px;
+  padding: 0 0 6px 0;
+}
+
+.menu p {
+  visibility: hidden;
+}
+
+.menu p:hover {
+  visibility: visible;
 }
 
 button {
