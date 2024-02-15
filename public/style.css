@@ -32,11 +32,18 @@
   --clr-contrast-0: #FFF;
 
   --heading-size: 1.7em;
+  --heading-size-1: 2.5em;
+
 }
 
 @font-face {
   font-family: "Abel";
   src: url(/Abel-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Protest strike";
+  src: url(/ProtestStrike-Regular.ttf);
 }
 
 body {
@@ -48,6 +55,8 @@ body {
 h1 {
   margin: 2em 0 0 0 ;
   text-align: center;
+  font-family: "Protest strike";
+  font-size: var(--heading-size-1);
 }
 
 .back-icon {
